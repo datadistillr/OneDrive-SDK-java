@@ -7,7 +7,7 @@ plugins {
 }
 
 group 'org.onedrive'
-version '0.10.2'
+version '0.10.3'
 
 compileJava {
 	sourceCompatibility = 1.7
@@ -25,7 +25,7 @@ repositories {
 
 ext {
 	nettyVer = '4.1.86.Final'
-	jacksonVer = '2.12.7.1'
+	jacksonVer = '2.14.2'
 }
 
 dependencies {
@@ -50,9 +50,9 @@ dependencies {
 
 	api 'org.jetbrains:annotations:+'
 
-	testCompile "com.fasterxml.jackson.core:jackson-databind:$jacksonVer"
-	testCompile 'org.junit.jupiter:junit-jupiter-api:5.+'
-	testRuntime 'org.junit.jupiter:junit-jupiter-engine:5.+'
+	testImplementation "com.fasterxml.jackson.core:jackson-databind:$jacksonVer"
+	testImplementation 'org.junit.jupiter:junit-jupiter-api:5.+'
+	testImplementation 'org.junit.jupiter:junit-jupiter-engine:5.+'
 }
 
 test {
