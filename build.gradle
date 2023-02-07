@@ -1,8 +1,8 @@
 plugins {
 	id 'java-library'
 	id 'idea'
-	id 'com.google.osdetector' version '1.6.2'
-	id 'io.freefair.lombok' version '3.8.4'
+	id 'com.google.osdetector' version '1.7.2'
+	id 'io.freefair.lombok' version '6.6.1'
 	id 'maven-publish'
 }
 
@@ -24,8 +24,8 @@ repositories {
 }
 
 ext {
-	nettyVer = '4.1.38.Final'
-	jacksonVer = '2.10.0.pr1'
+	nettyVer = '4.1.86.Final'
+	jacksonVer = '2.12.7.1'
 }
 
 dependencies {
