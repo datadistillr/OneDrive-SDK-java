@@ -83,18 +83,19 @@ artifacts {
 
 publishing {
 	publications {
-		myLibrary(MavenPublication) {
+		maven(MavenPublication) {
+			groupId = group
+			artifactId = 'OneDrive-SDK-java'
+			version = version
 			from components.java
 
-			artifact sourcesJar
-			artifact javadocJar
+			pom {
+				description = 'A fast, easy to use, intuitive Java API for OneDrive.'
+			}
 		}
 	}
 
 	repositories {
-		maven {
-			name = 'myRepo'
-			url = "file://${buildDir}/repo"
-		}
+		maven { url "https://jitpack.io" }
 	}
 }
