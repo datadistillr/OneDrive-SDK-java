@@ -1,7 +1,7 @@
 plugins {
 	id 'java-library'
 	id 'idea'
-	id 'com.google.osdetector' version '1.7.3'
+	id "com.google.osdetector" version "1.7.3"
 	id 'io.freefair.lombok' version "8.0.1"
 	id 'maven-publish'
 }
@@ -41,10 +41,9 @@ dependencies {
 	api "io.netty:netty-transport:$nettyVer"
 
 
-	if (osdetector.os == 'linux') {
+	if (osdetector.os.isLike("linux")) {
 		implementation "io.netty:netty-transport-native-epoll:4.+:${osdetector.classifier}"
-	}
-	else if (osdetector.os == 'osx' || osdetector.os.endsWith('bsd')) {
+	} else if (osdetector.os.isLike("osx") || osdetector.os.endsWith('bsd')) {
 		implementation "io.netty:netty-transport-native-kqueue:4.+:${osdetector.classifier}"
 	}
 
